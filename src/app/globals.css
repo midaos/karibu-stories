@@ -11,20 +11,17 @@
 }
 
 @layer base {
-
   :root {
-    color-scheme: light;
+    /* Cream paper light mode — no pure whites */
+    --bg-app: #ebe3d3;
+    --bg-elevated: #f3ecdd;
+    --bg-muted: #d9d0bc;
+    --text-main: #1c1814;
+    --text-muted: #6b6358;
+    --text-faint: #a39a8c;
+    --border-main: #d1c7b2;
+    --border-strong: #b0a690;
   }
-  .dark {
-    color-scheme: dark;
-  }
-
-  select,
-  option {
-    background-color: var(--bg-elevated);
-    color: var(--text-main);
-  }
-}
 
   .dark {
     --bg-app: #0b0b0c;
@@ -51,5 +48,15 @@
   }
 
   h1, h2, h3 { letter-spacing: -0.02em; }
+
+  :root { color-scheme: light; }
+  .dark { color-scheme: dark; }
+
+  select,
+  option {
+    background-color: var(--bg-elevated);
+    color: var(--text-main);
+  }
+}
 
 .tabular { font-variant-numeric: tabular-nums; }
